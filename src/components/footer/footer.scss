@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.footer{
+    width: 100vw;
+    margin: 2em 2em;
+    background-image: #f3faf7;
+    .upper{
+        display: flex;
+        justify-content: center;
+        .footerlogo{
+            // text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items:start;
+            width: 30%;
+            .fln{
+                font-size: 2em;
+                font-weight: bold;
+                span{
+                    color: #15ab62;
+                }
+            }
+            img{
+                width: 4em;
+            }
+        }
+        .footerabout{
+            width: 20%;
+            .falist{
+                .falisttit{
+                font-size: 1.3em;
+                font-weight: bold;
+                color: #15ab62;
+            }
+            li{
+                margin-top: .5em;
+            }
+            }
+        }
+        .footercontact{
+            width: 20%;
+            margin-top: .5em;
+            .fchead{
+                font-size: 1.3em;
+            }
+            .mob{
+                margin-top: .5em;
+            }
+            .mail{
+                margin-top: .5em;
+            }
+        }
+    }
+}
