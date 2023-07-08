@@ -227,6 +227,7 @@
         font-family: 'Open Sans', sans-serif;
         .campaignsbox{
             width: 80%;
+            height: 25em;
             // height: 7    0vh;
             display: flex;
             flex-direction: column;
@@ -238,8 +239,8 @@
             text-align: center;
             color: #054a29;
             figure{
-                img{
-                    width: 100%;
+                img{ 
+                    width: 20em;
                     height: 12em;
                     border-radius: 1em;
                 }

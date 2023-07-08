@@ -83,7 +83,7 @@ const Home = () => {
         let tempamount = 0;
         let tempcount = 0;
 
-        alldocs?.forEach((ele)=>{
+        alldocs.forEach((ele)=>{
             ele['donors'].forEach((element)=>{
                 tempamount += Number(element.amount)
                 tempcount++;
@@ -96,7 +96,7 @@ const Home = () => {
 
     useEffect(()=>{
         cal();
-    },[]);
+    },[alldocs]);
     // console.log(amount);
     const responsive = {
         superLargeDesktop: {
@@ -327,7 +327,7 @@ const Home = () => {
                         )
                         )
                     }
-                    <div className="campaignsbox">
+                    {/* <div className="campaignsbox">
                     <figure>
                         <img src={grain} alt="" />
                     </figure>
@@ -363,6 +363,31 @@ const Home = () => {
                         </p>
                         <button className="cambtn">Readmore</button>
                 </div>
+                <div className="campaignsbox">
+                    <figure>
+                        <img src={grain} alt="" />
+                    </figure>
+                    
+                        <h1>Sugar Cane</h1>
+                        <div className="camline"></div>
+                        <p className="campaingscon">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptatibus ducimus repudiandae saepe possimus. Perferendis sint officia, laboriosam unde cum minima?
+                        </p>
+                        <button className="cambtn">Readmore</button>
+                </div>
+                <div className="campaignsbox">
+                    <figure>
+                        <img src={grain} alt="" />
+                    </figure>
+                    
+                        <h1>Sugar Cane</h1>
+                        <div className="camline"></div>
+                        <p className="campaingscon">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptatibus ducimus repudiandae saepe possimus. Perferendis sint officia, laboriosam unde cum minima?
+                        </p>
+                        <button className="cambtn">Readmore</button>
+                </div> */}
+                
                 </Carousel>;
                 {/* <div className="campaignsbox">
                     <figure>
