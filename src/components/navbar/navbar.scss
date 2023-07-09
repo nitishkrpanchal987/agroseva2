@@ -6,11 +6,12 @@
 
 .navbar{
     width: 100vw;
-    height: 3.7em;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     // border-bottom: 1px solid black;
     // align-items: center;
+    overflow: hidden;
     .navtitle{
         display: flex;
         align-items: center;

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap');
 
 * {
   margin: 0;
@@ -23,7 +24,7 @@
 
 .introcon {
   width: 100%;
-
+  font-family: 'Poppins', sans-serif;
   .headintro {
     background-color: #f3faf7;
     .headtitle {
@@ -63,12 +64,12 @@
         }
         .righttitle {
           margin-top: 30px;
-          font-size: 80px;
+          font-size: 70px;
           font-weight: bold;
           letter-spacing: 4px;
           line-height: 1.05;
           overflow: hidden;
-          margin-bottom: 10px;
+          margin-bottom: 20px;
           // max-height: 200px;
           // line-height: 100%;
           // gap: 20px 50px;
@@ -77,18 +78,22 @@
           display: flex;
           justify-content: space-between;
           .l {
+            // line-height:30px;
             .num {
               font-size: 25px;
               font-weight: bold;
+              margin-bottom: -5px;
             }
             .den {
-              font-size: 18px;
+              margin-top: 0;
+              font-size: 15px;
             }
           }
           .r {
             font-size: 18px;
             margin-right: 20%;
-            .n {
+            .n{
+              margin-bottom: -5px;
             }
           }
         }
@@ -153,7 +158,7 @@
   .topdonor{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-top: 20px;
     margin-bottom: 20px;
     background-image: linear-gradient(#3f7b4c, #054a29);
@@ -170,7 +175,7 @@
         display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-around;
       .sym{
         width: 30px;
       }
@@ -189,6 +194,51 @@
         font-size: 13px;
         margin-bottom: 60px;
       }
+      }
+    }
+  }
+  .atp{
+    display: flex;
+    margin-top: 50px;
+    .leftatp{
+      width: 60%;
+      padding: 20px;
+      overflow: hidden; 
+      h1{
+        font-size: 40px;
+        overflow: hidden;
+        text-align: center;
+      }
+      .about{
+        font-size: 17px;
+        margin-top: 20px;
+        margin-left: 20px;
+        line-height: normal;
+      }
+      img{
+        width: 80%;
+        height: 70vh;
+        margin: 40px 20px;
+      }
+    }
+    .rightatp{
+      background-color: #f3faf7;
+      width: 40%;
+      padding: 15px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      h1{
+        overflow: hidden;
+      }
+      .don{
+        margin-top: 30px;
+        .amount{
+          margin-bottom: -5px;  
+        }
+        .name{
+          font-weight: bold;
+          font-size: 1.1rem;
+        }
       }
     }
   }

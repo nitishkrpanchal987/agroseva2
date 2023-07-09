@@ -11,11 +11,11 @@ import donatepng from '../../media/donatepng.png'
 import amountpng from '../../media/amountpng.png'
 import donor from '../../media/donor.jpeg'
 import farmer from '../../media/farmer.jpeg'
-import grain from '../../media/grain.jpeg'
 import paddy from '../../media/paddy.mp4'
-
-
 import { FaGg, FaQuoteLeft } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import { useList } from '../../context/listContext';
+import Spinner from '../Spinner';
 
 const Home = () => {
     const [counterOn, setConteron] = useState(false);
@@ -25,9 +25,11 @@ const Home = () => {
     const [amount, setamount] = useState(0);
     const [farmercount, setfarmercount] = useState(0);
     const [doncount, setdoncount] = useState(0);
+    const [loading, setLoading] = useState(false);
     useEffect(() => {
         const temp = []
-        db.collection("campaigns").get()
+        setLoading(false);
+        db?.collection("campaigns").get()
             .then((doc) => {
                 doc.forEach((docu) => {
                     const data = docu.data().campaignsList[0];
@@ -37,6 +39,7 @@ const Home = () => {
                     // })
                 })
                 setdocs(temp)
+                setLoading(true);
 
             }).catch((error) => {
                 console.log("Error getting document:", error);
@@ -45,7 +48,7 @@ const Home = () => {
 
     useEffect(() => {
         const temp = []
-        db.collection("farmer_exp").get()
+        db?.collection("farmer_exp").get()
             .then((doc) => {
                 doc.forEach((docu) => {
                     const data = docu.data().experience;
@@ -63,7 +66,7 @@ const Home = () => {
 
     useEffect(() => {
         const temp = []
-        db.collection("donor_exp").get()
+        db?.collection("donor_exp").get()
             .then((doc) => {
                 doc.forEach((docu) => {
                     const data = docu.data().experience;
@@ -83,7 +86,7 @@ const Home = () => {
         let tempamount = 0;
         let tempcount = 0;
 
-        alldocs.forEach((ele)=>{
+        alldocs?.forEach((ele)=>{
             ele['donors'].forEach((element)=>{
                 tempamount += Number(element.amount)
                 tempcount++;
@@ -136,8 +139,24 @@ const Home = () => {
             items: 1
         }
     };
+    function createClickHandler(item) {
+        return function () {
+          onSet(item);
+        }
+      }
+    const [list, setList] = useList();
+      const onSet = (temp) => {
+        localStorage.clear();
+        const alltemp = temp;
+        localStorage.setItem("obj", JSON.stringify(alltemp));
+        setList(temp);
+        console.log(list);
+      }
     return (
-        <div className='container'>
+    <>
+    {
+        !loading ? <Spinner/>:
+        <div className='homecontainer'>
             <div className="intro">
                 <div className="introL">
                     <p className="introLH">Farmers &</p>
@@ -164,7 +183,7 @@ const Home = () => {
                 </div>
             </div>
             <ScrollTrigger onEnter={() => { setConteron(true) }}>
-                <div className="data">
+                <div className="homedata">
                     <div className="datacol">
                         <img src={farmerpng} alt="" />
                         <p className="datatit">Total Farmer</p>
@@ -243,28 +262,25 @@ const Home = () => {
                         <video src={paddy} autoPlay loop muted className='video' />
                     </div>
                 </div>
+                
                 <div className="season">
                     <div className="seasonL">
-                        <p className="seasonLH">The rabi crop</p>
+                        <p className="seasonLH">The Kharif crop</p>
                         <div className="temp">
                             <p className="seasonLP">
-                                Rabi Crops are harvested in the spring season while it is sown
+                            Kharif crop refers to the type of crop that is sown and harvested
                             </p>
                             <p className="seasonLP">
-                                in winter. The rabi crops are sown around mid-November,
+                            during the rainy season in India, which typically lasts from June to October.
                             </p>
                             <p className="seasonLP">
-                                preferably after the monsoon rains are over
-                                and harvesting
+                            These crops are well-suited to the monsoon climate and require a significant
                             </p>
                             <p className="seasonLP">
-                                begins in April / May. The crops are grown either with rainwater
+                            amount of water for their growth. Kharif crops are also known 
                             </p>
                             <p className="seasonLP">
-                                that hasepercolated into the ground or using irrigation. A good
-                            </p>
-                            <p className="seasonLP">
-                                rain in winter spoils the rabi crops but is good for Kharif crops.
+                            as summer or monsoon crops.
                             </p>
                         </div>
                         <button className="seasonbtn">Learn More</button>
@@ -273,36 +289,7 @@ const Home = () => {
                         <video src={paddy} autoPlay loop muted className='video' />
                     </div>
                 </div>
-                <div className="season">
-                    <div className="seasonL">
-                        <p className="seasonLH">The rabi crop</p>
-                        <div className="temp">
-                            <p className="seasonLP">
-                                Rabi Crops are harvested in the spring season while it is sown
-                            </p>
-                            <p className="seasonLP">
-                                in winter. The rabi crops are sown around mid-November,
-                            </p>
-                            <p className="seasonLP">
-                                preferably after the monsoon rains are over
-                                and harvesting
-                            </p>
-                            <p className="seasonLP">
-                                begins in April / May. The crops are grown either with rainwater
-                            </p>
-                            <p className="seasonLP">
-                                that hasepercolated into the ground or using irrigation. A good
-                            </p>
-                            <p className="seasonLP">
-                                rain in winter spoils the rabi crops but is good for Kharif crops.
-                            </p>
-                        </div>
-                        <button className="seasonbtn">Learn More</button>
-                    </div>
-                    <div className="seasonR">
-                        <video src={paddy} autoPlay loop muted className='video' />
-                    </div>
-                </div>
+                
             </Carousel>
             <div className="line1"></div>
             <p className="fabtit">Campaigns</p>
@@ -317,12 +304,14 @@ const Home = () => {
                                 <figure>
                                     <img src={ele.campaign_image_url} alt="" />
                                 </figure>
-                                <h1>{ele.campaign_title}</h1>
+                                <h2>{ele.campaign_title}</h2>
                                 <div className="camline"></div>
                                 <p className="campaingscon">
                                     {ele.product_description.slice(0, 100)}...
                                 </p>
-                                <button className="cambtn">Readmore</button>
+                                <Link to="/blog">
+                                    <button className="cambtn" onClick={createClickHandler(ele)}>Readmore</button>
+                                </Link>
                             </div>
                         )
                         )
@@ -528,6 +517,8 @@ const Home = () => {
             </div>
 
         </div>
+    }
+        </>
     )
 }
 // FaQuoteLeft

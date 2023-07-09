@@ -1,57 +1,61 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.footer{
-    width: 100vw;
-    margin: 2em 2em;
-    background-image: #f3faf7;
-    .upper{
-        display: flex;
-        justify-content: center;
-        .footerlogo{
-            // text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items:start;
-            width: 30%;
-            .fln{
-                font-size: 2em;
-                font-weight: bold;
-                span{
-                    color: #15ab62;
-                }
-            }
-            img{
-                width: 4em;
-            }
+.footer {
+  width: 100vw;
+  margin: 0em 2em;
+  background-image: #f3faf7;
+//   position: fixed;
+//   left: 0;
+//   bottom: 0;
+//     margin-top: auto;
+  .upper {
+    display: flex;
+    justify-content: center;
+    .footerlogo {
+      // text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 30%;
+      .fln {
+        font-size: 2em;
+        font-weight: bold;
+        span {
+          color: #15ab62;
         }
-        .footerabout{
-            width: 20%;
-            .falist{
-                .falisttit{
-                font-size: 1.3em;
-                font-weight: bold;
-                color: #15ab62;
-            }
-            li{
-                margin-top: .5em;
-            }
-            }
-        }
-        .footercontact{
-            width: 20%;
-            margin-top: .5em;
-            .fchead{
-                font-size: 1.3em;
-            }
-            .mob{
-                margin-top: .5em;
-            }
-            .mail{
-                margin-top: .5em;
-            }
-        }
+      }
+      img {
+        width: 4em;
+      }
     }
+    .footerabout {
+      width: 20%;
+      .falist {
+        .falisttit {
+          font-size: 1.3em;
+          font-weight: bold;
+          color: #15ab62;
+        }
+        li {
+          margin-top: 0.5em;
+        }
+      }
+    }
+    .footercontact {
+      width: 20%;
+      margin-top: 0.5em;
+      .fchead {
+        font-size: 1.3em;
+      }
+      .mob {
+        margin-top: 0.5em;
+      }
+      .mail {
+        margin-top: 0.5em;
+      }
+    }
+  }
 }
