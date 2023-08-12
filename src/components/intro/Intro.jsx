@@ -39,7 +39,7 @@ const Intro = () => {
         // setArray(arr);
     }, [list]);
     useEffect(()=>{
-        if(fund && totalAmount)setPer(parseInt((Number(fund) / Number(totalAmount)) * 100));
+        if(fund && totalAmount)setPer(Math.floor((Number(fund) / Number(totalAmount)) * 100));
     }, [fund, totalAmount]);
     // const top4 = array.sort((a, b) => b - a).slice(0, 4);
     // console.log(array);

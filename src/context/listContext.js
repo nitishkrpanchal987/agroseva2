@@ -4,6 +4,8 @@ const ListContext = createContext();
 
 
 const ListProvider = ({children})=>{
+
+    
     const [list, setList] = useState({});
     useEffect(()=>{
         const data = localStorage.getItem('obj');

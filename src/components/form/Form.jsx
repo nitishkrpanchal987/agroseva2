@@ -162,7 +162,7 @@ const Form = () => {
         <div className='formcon'>
             <div className="leftform">
                 <img src={photo} alt="" />
-                <p className="desc"><span>We proudly a non profit organisation.</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora exercitationem quo ea quae corporis adipisci dignissimos vel natus perspiciatis fuga labore, debitis, itaque rem esse? Illum, minus? Dolor porro perspiciatis ipsam eius nesciunt est.</p>
+                <p className="desc"><span>We proudly a non profit organisation.</span> Agriculture is the practice of cultivating plants, animals, and other organisms for food, fiber, medicinal plants, and other products that are used to sustain and enhance human life. It's a vital industry that plays a critical role in feeding and supporting the global population.</p>
             </div>
             <div className="rightform">
                 <h2>Thanks for donating<FcMoneyTransfer /></h2>
