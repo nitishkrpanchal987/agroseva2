@@ -419,7 +419,7 @@ const Home = () => {
                             <p className="drname">{ele.name}</p>
                         </div>
                     ))}
-                    <div className="drcon">
+                    {/* <div className="drcon">
                         <FaQuoteLeft className='drquote' />
                         <figure>
                             <img src={donor} alt="" />
@@ -454,7 +454,7 @@ const Home = () => {
                         <p className="drp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eum quidem voluptates dolores sed ut quisquam delectus dicta beatae hic!</p>
                         <div className="drline"></div>
                         <p className="drname">John Doe</p>
-                    </div>
+                    </div> */}
                 </Carousel>
             </div>
 
@@ -477,7 +477,7 @@ const Home = () => {
                             </div>
                         ))
                     }
-                    <div className="drcon">
+                    {/* <div className="drcon">
                         <FaQuoteLeft className='drquote' />
                         <figure>
                             <img src={donor} alt="" />
@@ -512,7 +512,7 @@ const Home = () => {
                         <p className="drp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eum quidem voluptates dolores sed ut quisquam delectus dicta beatae hic!</p>
                         <div className="drline"></div>
                         <p className="drname">John Doe</p>
-                    </div>
+                    </div> */}
                 </Carousel>
             </div>
 
