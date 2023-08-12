@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.3a621a06.css",
-    "main.js": "/static/js/main.9904cc44.js",
+    "main.css": "/static/css/main.9efe2f9e.css",
+    "main.js": "/static/js/main.e6bda1c1.js",
     "static/js/787.c61422d3.chunk.js": "/static/js/787.c61422d3.chunk.js",
     "static/media/paddy.mp4": "/static/media/paddy.64cef55473102c1558fc.mp4",
     "static/media/introR.jpeg": "/static/media/introR.7f4b21f37866d3d943a3.jpeg",
     "static/media/spinner.gif": "/static/media/spinner.c4cb660d86eda40398c3.gif",
+    "static/media/contactus.jpeg": "/static/media/contactus.02813507a63dda10c6d7.jpeg",
     "static/media/farmer.jpeg": "/static/media/farmer.b94886f34fd523bb5328.jpeg",
     "static/media/farmerpng.png": "/static/media/farmerpng.c950d5d803cfd227c063.png",
     "static/media/amountpng.png": "/static/media/amountpng.5b74495c14ba5a1e92f3.png",
+    "static/media/about.jpeg": "/static/media/about.8fcc66508414b6b0e1fb.jpeg",
     "static/media/donatepng.png": "/static/media/donatepng.c5326b7a8334c142be08.png",
     "static/media/donor.jpeg": "/static/media/donor.9d89c2be60c6d67b78d6.jpeg",
     "static/media/logo.png": "/static/media/logo.0c0c6fb268e5d9be819a.png",
@@ -16,12 +18,12 @@
     "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/index.html",
-    "main.3a621a06.css.map": "/static/css/main.3a621a06.css.map",
-    "main.9904cc44.js.map": "/static/js/main.9904cc44.js.map",
+    "main.9efe2f9e.css.map": "/static/css/main.9efe2f9e.css.map",
+    "main.e6bda1c1.js.map": "/static/js/main.e6bda1c1.js.map",
     "787.c61422d3.chunk.js.map": "/static/js/787.c61422d3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3a621a06.css",
-    "static/js/main.9904cc44.js"
+    "static/css/main.9efe2f9e.css",
+    "static/js/main.e6bda1c1.js"
   ]
 }
